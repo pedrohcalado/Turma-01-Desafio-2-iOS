@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		00AE97662768D1AF003A326E /* DesafioGitUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97562768D1AD003A326E /* DesafioGitUiApp.swift */; };
 		00AE97672768D1AF003A326E /* DesafioGitUiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97562768D1AD003A326E /* DesafioGitUiApp.swift */; };
-		00AE97682768D1AF003A326E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97572768D1AD003A326E /* ContentView.swift */; };
-		00AE97692768D1AF003A326E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97572768D1AD003A326E /* ContentView.swift */; };
+		00AE97682768D1AF003A326E /* RepositorioListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97572768D1AD003A326E /* RepositorioListView.swift */; };
+		00AE97692768D1AF003A326E /* RepositorioListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97572768D1AD003A326E /* RepositorioListView.swift */; };
 		00AE976A2768D1AF003A326E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AE97582768D1AF003A326E /* Assets.xcassets */; };
 		00AE976B2768D1AF003A326E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00AE97582768D1AF003A326E /* Assets.xcassets */; };
+		00AE97762768D786003A326E /* RepositorioDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97752768D786003A326E /* RepositorioDTO.swift */; };
+		00AE97782768E3BF003A326E /* PullRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97772768E3BF003A326E /* PullRequestsView.swift */; };
+		00AE977A2768E5D7003A326E /* PullRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE97792768E5D7003A326E /* PullRequestDTO.swift */; };
+		00AE977E276913CB003A326E /* RepositorioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE977D276913CB003A326E /* RepositorioCell.swift */; };
+		00AE978227691503003A326E /* PullRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AE978127691503003A326E /* PullRequestCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00AE97562768D1AD003A326E /* DesafioGitUiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioGitUiApp.swift; sourceTree = "<group>"; };
-		00AE97572768D1AD003A326E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		00AE97572768D1AD003A326E /* RepositorioListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorioListView.swift; sourceTree = "<group>"; };
 		00AE97582768D1AF003A326E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00AE975D2768D1AF003A326E /* DesafioGitUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioGitUi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AE97632768D1AF003A326E /* DesafioGitUi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioGitUi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AE97652768D1AF003A326E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		00AE97752768D786003A326E /* RepositorioDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorioDTO.swift; sourceTree = "<group>"; };
+		00AE97772768E3BF003A326E /* PullRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsView.swift; sourceTree = "<group>"; };
+		00AE97792768E5D7003A326E /* PullRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestDTO.swift; sourceTree = "<group>"; };
+		00AE977D276913CB003A326E /* RepositorioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorioCell.swift; sourceTree = "<group>"; };
+		00AE978127691503003A326E /* PullRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PullRequestCell.swift; path = ../../../../../PullRequestCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +64,9 @@
 		00AE97552768D1AD003A326E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				00AE977B276913AE003A326E /* View */,
+				00AE97742768D71E003A326E /* Model */,
 				00AE97562768D1AD003A326E /* DesafioGitUiApp.swift */,
-				00AE97572768D1AD003A326E /* ContentView.swift */,
 				00AE97582768D1AF003A326E /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +87,42 @@
 				00AE97652768D1AF003A326E /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		00AE97742768D71E003A326E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00AE97752768D786003A326E /* RepositorioDTO.swift */,
+				00AE97792768E5D7003A326E /* PullRequestDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00AE977B276913AE003A326E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00AE9780276914A1003A326E /* PullRequest */,
+				00AE977F2769146B003A326E /* Repositorio */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00AE977F2769146B003A326E /* Repositorio */ = {
+			isa = PBXGroup;
+			children = (
+				00AE97572768D1AD003A326E /* RepositorioListView.swift */,
+				00AE977D276913CB003A326E /* RepositorioCell.swift */,
+			);
+			path = Repositorio;
+			sourceTree = "<group>";
+		};
+		00AE9780276914A1003A326E /* PullRequest */ = {
+			isa = PBXGroup;
+			children = (
+				00AE97772768E3BF003A326E /* PullRequestsView.swift */,
+				00AE978127691503003A326E /* PullRequestCell.swift */,
+			);
+			path = PullRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00AE97682768D1AF003A326E /* ContentView.swift in Sources */,
+				00AE978227691503003A326E /* PullRequestCell.swift in Sources */,
+				00AE97682768D1AF003A326E /* RepositorioListView.swift in Sources */,
+				00AE97782768E3BF003A326E /* PullRequestsView.swift in Sources */,
 				00AE97662768D1AF003A326E /* DesafioGitUiApp.swift in Sources */,
+				00AE977E276913CB003A326E /* RepositorioCell.swift in Sources */,
+				00AE97762768D786003A326E /* RepositorioDTO.swift in Sources */,
+				00AE977A2768E5D7003A326E /* PullRequestDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00AE97692768D1AF003A326E /* ContentView.swift in Sources */,
+				00AE97692768D1AF003A326E /* RepositorioListView.swift in Sources */,
 				00AE97672768D1AF003A326E /* DesafioGitUiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
