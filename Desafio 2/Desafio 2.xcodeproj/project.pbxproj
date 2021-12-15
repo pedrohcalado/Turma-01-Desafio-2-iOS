@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EBFEAD3A276A281E00230373 /* Desafio_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFEAD39276A281E00230373 /* Desafio_2App.swift */; };
+		C1A119DB276A630D00430ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119DA276A630D00430ECF /* AppDelegate.swift */; };
+		C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119DC276A631F00430ECF /* SceneDelegate.swift */; };
 		EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFEAD3B276A281E00230373 /* ContentView.swift */; };
 		EBFEAD3E276A282200230373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD3D276A282200230373 /* Assets.xcassets */; };
 		EBFEAD41276A282200230373 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD40276A282200230373 /* Preview Assets.xcassets */; };
@@ -34,8 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C1A119DA276A630D00430ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C1A119DC276A631F00430ECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C1A119DE276A671600430ECF /* Desafio-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Desafio-2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EBFEAD36276A281E00230373 /* Desafio 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBFEAD39276A281E00230373 /* Desafio_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_2App.swift; sourceTree = "<group>"; };
 		EBFEAD3B276A281E00230373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBFEAD3D276A282200230373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBFEAD40276A282200230373 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -94,10 +97,12 @@
 		EBFEAD38276A281E00230373 /* Desafio 2 */ = {
 			isa = PBXGroup;
 			children = (
-				EBFEAD39276A281E00230373 /* Desafio_2App.swift */,
+				C1A119DE276A671600430ECF /* Desafio-2-Info.plist */,
 				EBFEAD3B276A281E00230373 /* ContentView.swift */,
 				EBFEAD3D276A282200230373 /* Assets.xcassets */,
 				EBFEAD3F276A282200230373 /* Preview Content */,
+				C1A119DA276A630D00430ECF /* AppDelegate.swift */,
+				C1A119DC276A631F00430ECF /* SceneDelegate.swift */,
 			);
 			path = "Desafio 2";
 			sourceTree = "<group>";
@@ -257,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A119DB276A630D00430ECF /* AppDelegate.swift in Sources */,
 				EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */,
-				EBFEAD3A276A281E00230373 /* Desafio_2App.swift in Sources */,
+				C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +428,7 @@
 				DEVELOPMENT_TEAM = L56QRU7929;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Desafio-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -451,7 +457,7 @@
 				DEVELOPMENT_TEAM = L56QRU7929;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Desafio-2-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
