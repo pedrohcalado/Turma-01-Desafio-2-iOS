@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C1A119DB276A630D00430ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119DA276A630D00430ECF /* AppDelegate.swift */; };
 		C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119DC276A631F00430ECF /* SceneDelegate.swift */; };
+		C1A119E9276A837100430ECF /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119E8276A837100430ECF /* RepositoriesView.swift */; };
+		C1A119EB276A846600430ECF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119EA276A846600430ECF /* Repository.swift */; };
 		EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFEAD3B276A281E00230373 /* ContentView.swift */; };
 		EBFEAD3E276A282200230373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD3D276A282200230373 /* Assets.xcassets */; };
 		EBFEAD41276A282200230373 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD40276A282200230373 /* Preview Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		C1A119DA276A630D00430ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1A119DC276A631F00430ECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C1A119DE276A671600430ECF /* Desafio-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Desafio-2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C1A119E8276A837100430ECF /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
+		C1A119EA276A846600430ECF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EBFEAD36276A281E00230373 /* Desafio 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFEAD3B276A281E00230373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBFEAD3D276A282200230373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +78,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1A119DF276A825200430ECF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C1A119E0276A826400430ECF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1A119E1276A826D00430ECF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C1A119E4276A82AB00430ECF /* PullRequestDetail */,
+				C1A119E3276A829000430ECF /* PullRequests */,
+				C1A119E2276A827800430ECF /* Repositories */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C1A119E2276A827800430ECF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C1A119E5276A82C600430ECF /* Model */,
+				C1A119E6276A82CC00430ECF /* View */,
+				C1A119E7276A82D100430ECF /* ViewModel */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C1A119E3276A829000430ECF /* PullRequests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PullRequests;
+			sourceTree = "<group>";
+		};
+		C1A119E4276A82AB00430ECF /* PullRequestDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PullRequestDetail;
+			sourceTree = "<group>";
+		};
+		C1A119E5276A82C600430ECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1A119EA276A846600430ECF /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1A119E6276A82CC00430ECF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1A119E8276A837100430ECF /* RepositoriesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1A119E7276A82D100430ECF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EBFEAD2D276A281E00230373 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +172,9 @@
 		EBFEAD38276A281E00230373 /* Desafio 2 */ = {
 			isa = PBXGroup;
 			children = (
+				C1A119E1276A826D00430ECF /* Screens */,
+				C1A119E0276A826400430ECF /* Services */,
+				C1A119DF276A825200430ECF /* Helpers */,
 				C1A119DE276A671600430ECF /* Desafio-2-Info.plist */,
 				EBFEAD3B276A281E00230373 /* ContentView.swift */,
 				EBFEAD3D276A282200230373 /* Assets.xcassets */,
@@ -262,7 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A119E9276A837100430ECF /* RepositoriesView.swift in Sources */,
 				C1A119DB276A630D00430ECF /* AppDelegate.swift in Sources */,
+				C1A119EB276A846600430ECF /* Repository.swift in Sources */,
 				EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */,
 				C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */,
 			);
