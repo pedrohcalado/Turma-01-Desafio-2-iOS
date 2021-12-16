@@ -30,6 +30,7 @@ class GitHubService: RepositoriesService {
                 print("PULL REQUESTS")
                 completion(true, response.value, nil)
             case .failure(let error):
+                print("DEU RUIM")
                 completion(false, nil, "Error when fetching pull requests: \(error)")
             }
         }

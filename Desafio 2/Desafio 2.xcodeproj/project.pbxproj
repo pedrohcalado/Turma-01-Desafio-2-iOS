@@ -144,7 +144,6 @@
 		C1A119E1276A826D00430ECF /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C1A119E4276A82AB00430ECF /* PullRequestDetail */,
 				C1A119E3276A829000430ECF /* PullRequests */,
 				C1A119E2276A827800430ECF /* Repositories */,
 			);
@@ -169,13 +168,6 @@
 				EB59D0A7276B57C300BBBE20 /* ViewModel */,
 			);
 			path = PullRequests;
-			sourceTree = "<group>";
-		};
-		C1A119E4276A82AB00430ECF /* PullRequestDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PullRequestDetail;
 			sourceTree = "<group>";
 		};
 		C1A119E5276A82C600430ECF /* Model */ = {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct RepositoriesView: View {
     @StateObject var repositoriesViewModel = RepositoriesViewModel(service: GitHubService())
@@ -18,7 +19,16 @@ struct RepositoriesView: View {
                     label: {
                         VStack(alignment: .leading) {
                             HStack {
-                                CustomImageView(urlString: "\(item.pictureURL)")
+                                WebImage(url: URL(string: item.pictureURL))
+                                    .resizable()
+                                    .placeholder(Image(systemName: "photo"))
+                                    .placeholder {
+                                        Rectangle().foregroundColor(.gray)
+                                    }
+                                    .indicator(.activity)
+                                    .transition(.fade(duration: 0.5))
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100, alignment: .center)
                                 VStack(alignment: .leading, spacing: 3) {
                                     HStack {
                                         Text("Name: ")
@@ -58,15 +68,8 @@ struct RepositoriesView: View {
                         }
                     }
                 )
-                
             }
             .navigationBarTitle("Swift Repositories")
         }
     }
 }
-
-//struct RepositoriesView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        RepositoriesView()
-//    }
-//}

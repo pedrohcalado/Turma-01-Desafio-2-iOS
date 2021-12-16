@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PullRequestsView: View {
     var repositoryName: String
@@ -26,7 +27,16 @@ struct PullRequestsView: View {
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        CustomImageView(urlString: "\(item.authorProfilePictureURL)")
+                        WebImage(url: URL(string: item.authorProfilePictureURL))
+                            .resizable()
+                            .placeholder(Image(systemName: "photo"))
+                            .placeholder {
+                                Rectangle().foregroundColor(.gray)
+                            }
+                            .indicator(.activity)
+                            .transition(.fade(duration: 0.5))
+                            .scaledToFit()
+                            .frame(width: 100, height: 100, alignment: .center)
                         VStack(alignment: .leading, spacing: 3) {
                             HStack {
                                 Text("Title: ")
@@ -63,13 +73,7 @@ struct PullRequestsView: View {
                     UIApplication.shared.open(URL(string: item.htmlURL) ?? K.gitHubURL)
                 }
             }
-            .navigationBarTitle("Pull Requests")
+            .navigationBarTitle("Pull Requests", displayMode: .inline)
         }
     }
 }
-
-//struct PullRequestsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PullRequestsView()
-//    }
-//}
