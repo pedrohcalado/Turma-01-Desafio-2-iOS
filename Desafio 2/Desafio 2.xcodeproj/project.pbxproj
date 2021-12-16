@@ -14,6 +14,9 @@
 		C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119DC276A631F00430ECF /* SceneDelegate.swift */; };
 		C1A119E9276A837100430ECF /* RepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119E8276A837100430ECF /* RepositoriesView.swift */; };
 		C1A119EB276A846600430ECF /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119EA276A846600430ECF /* Repository.swift */; };
+		C1A119ED276A8AC300430ECF /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119EC276A8AC300430ECF /* RepositoriesService.swift */; };
+		C1A119EF276AA44C00430ECF /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119EE276AA44C00430ECF /* RepositoriesViewModel.swift */; };
+		C1A119F1276AA85100430ECF /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A119F0276AA85100430ECF /* GitHubService.swift */; };
 		EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFEAD3B276A281E00230373 /* ContentView.swift */; };
 		EBFEAD3E276A282200230373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD3D276A282200230373 /* Assets.xcassets */; };
 		EBFEAD41276A282200230373 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBFEAD40276A282200230373 /* Preview Assets.xcassets */; };
@@ -50,6 +53,9 @@
 		C1A119DE276A671600430ECF /* Desafio-2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Desafio-2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C1A119E8276A837100430ECF /* RepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesView.swift; sourceTree = "<group>"; };
 		C1A119EA276A846600430ECF /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C1A119EC276A8AC300430ECF /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		C1A119EE276AA44C00430ECF /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		C1A119F0276AA85100430ECF /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		C895D30AC97103A11A88EB57 /* Pods-Desafio 2-Desafio 2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio 2-Desafio 2UITests.release.xcconfig"; path = "Target Support Files/Pods-Desafio 2-Desafio 2UITests/Pods-Desafio 2-Desafio 2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DC0E2040BAECBDBDA53409FC /* Pods_Desafio_2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D92E24965766A6C467F5C1 /* Pods-Desafio 2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio 2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Desafio 2Tests/Pods-Desafio 2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +119,8 @@
 		C1A119E0276A826400430ECF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C1A119EC276A8AC300430ECF /* RepositoriesService.swift */,
+				C1A119F0276AA85100430ECF /* GitHubService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 		C1A119E7276A82D100430ECF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C1A119EE276AA44C00430ECF /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -247,7 +256,6 @@
 				E8D92E24965766A6C467F5C1 /* Pods-Desafio 2Tests.debug.xcconfig */,
 				124F5791ED3B9B50C5EC9A7C /* Pods-Desafio 2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -490,7 +498,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1A119E9276A837100430ECF /* RepositoriesView.swift in Sources */,
+				C1A119ED276A8AC300430ECF /* RepositoriesService.swift in Sources */,
+				C1A119F1276AA85100430ECF /* GitHubService.swift in Sources */,
 				C1A119DB276A630D00430ECF /* AppDelegate.swift in Sources */,
+				C1A119EF276AA44C00430ECF /* RepositoriesViewModel.swift in Sources */,
 				C1A119EB276A846600430ECF /* Repository.swift in Sources */,
 				EBFEAD3C276A281E00230373 /* ContentView.swift in Sources */,
 				C1A119DD276A631F00430ECF /* SceneDelegate.swift in Sources */,
