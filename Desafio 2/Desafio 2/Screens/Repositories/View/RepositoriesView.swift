@@ -13,51 +13,61 @@ struct RepositoriesView: View {
     var body: some View {
         NavigationView {
             List(repositoriesViewModel.repositories, id: \.id) { item in
-                VStack(alignment: .leading) {
-                    HStack {
-                        CustomImageView(urlString: "\(item.pictureURL)")
-                        VStack(alignment: .leading, spacing: 3) {
+                NavigationLink(
+                    destination: PullRequestsView(repositoryName: item.repositoryName, repositoryOwner: item.owner),
+                    label: {
+                        VStack(alignment: .leading) {
                             HStack {
-                                Text("Name: ")
-                                    .fontWeight(.semibold)
-                                Text("\(item.repositoryName)")
+                                CustomImageView(urlString: "\(item.pictureURL)")
+                                VStack(alignment: .leading, spacing: 3) {
+                                    HStack {
+                                        Text("Name: ")
+                                            .fontWeight(.semibold)
+                                        Text("\(item.repositoryName)")
+                                    }
+                                    HStack {
+                                        Text("Author: ")
+                                            .fontWeight(.semibold)
+                                        Text("\(item.owner)")
+                                    }
+                                }
                             }
-                            HStack {
-                                Text("Author: ")
-                                    .fontWeight(.semibold)
-                                Text("\(item.owner)")
+                            
+                            VStack(alignment: .leading, spacing: 5) {
+                                HStack {
+                                    HStack {
+                                        Text("Stars:")
+                                            .fontWeight(.semibold)
+                                        Text("\(item.stars)")
+                                    }
+                                    HStack {
+                                        Text("Forks: ")
+                                            .fontWeight(.semibold)
+                                        Text("\(item.forks)")
+                                    }
+                                }
+                                
+                                HStack {
+                                    Text("Description:")
+                                        .fontWeight(.semibold)
+                                    Text("\(item.description)")
+                                        .lineLimit(2)
+                                        .minimumScaleFactor(0.9)
+                                }
+                                
                             }
                         }
                     }
-                    
-                    VStack(alignment: .leading, spacing: 5) {
-                        HStack {
-                            HStack {
-                                Text("Stars:")
-                                    .fontWeight(.semibold)
-                                Text("\(item.stars)")
-                            }
-                            HStack {
-                                Text("Forks: ")
-                                    .fontWeight(.semibold)
-                                Text("\(item.forks)")
-                            }
-                        }
-                        
-                        HStack {
-                            Text("Description:")
-                                .fontWeight(.semibold)
-                            Text("\(item.description)")
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.9)
-                        }
-                        
-                    }
-                }
+                )
+                
             }
             .navigationBarTitle("Swift Repositories")
         }
-        
-        
     }
 }
+
+//struct RepositoriesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RepositoriesView()
+//    }
+//}

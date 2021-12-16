@@ -14,6 +14,8 @@ class ImageLoaderService: ObservableObject {
     func loadImage(for urlString: String) {
         guard let url = URL(string: urlString) else { return }
         
+        // ver de usar Kingfisher
+        
 //        let request = AF.request("https://api.github.com/search/repositories?q=language:Swift&sort=stars&page=1")
 //        request.validate().responseDecodable(of: GitHubReponse.self) { response in
 //            switch response.result {
