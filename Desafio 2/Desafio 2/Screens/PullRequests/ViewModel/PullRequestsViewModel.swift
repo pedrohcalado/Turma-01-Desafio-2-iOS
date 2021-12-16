@@ -36,6 +36,6 @@ class PullRequestViewModel: ObservableObject, Identifiable {
         self.authorName = authorName
         self.authorProfilePictureURL = authorProfilePictureURL
         self.htmlURL = htmlURL
-        self.createdAt = createdAt
+        self.createdAt = FormatDate.formatStringDate(date: createdAt)
     }
 }
