@@ -14,7 +14,7 @@ class PullRequestsViewModel: ObservableObject, Identifiable {
     init(service: RepositoriesService = GitHubService(), repositoryName: String = "", repositoryOwner: String = "") {
         service.getPullRequests(fromRepository: repositoryName, ownedBy: repositoryOwner) { success, results, error in
             if success {
-                self.pullRequests = results?.map { PullRequestViewModel(title: $0.title, body: $0.body, authorName: $0.author.name, authorProfilePictureURL: $0.author.profilePicture, createdAt: $0.createdAt)} ?? []
+                self.pullRequests = results?.map { PullRequestViewModel(title: $0.title, body: $0.body, authorName: $0.author.name, authorProfilePictureURL: $0.author.profilePicture, htmlURL: $0.htmlURL, createdAt: $0.createdAt)} ?? []
             } else {
                 self.pullRequests = []
             }
@@ -27,13 +27,15 @@ class PullRequestViewModel: ObservableObject, Identifiable {
     @Published var body: String = "-"
     @Published var authorName: String = "-"
     @Published var authorProfilePictureURL: String = "-"
+    @Published var htmlURL = "-"
     @Published var createdAt: String = "-"
     
-    init(title: String, body: String, authorName: String, authorProfilePictureURL: String, createdAt: String) {
+    init(title: String, body: String, authorName: String, authorProfilePictureURL: String, htmlURL: String, createdAt: String) {
         self.title = title
         self.body = body
         self.authorName = authorName
         self.authorProfilePictureURL = authorProfilePictureURL
+        self.htmlURL = htmlURL
         self.createdAt = createdAt
     }
 }

@@ -54,7 +54,6 @@ struct RepositoriesView: View {
                                         .lineLimit(2)
                                         .minimumScaleFactor(0.9)
                                 }
-                                
                             }
                         }
                     }

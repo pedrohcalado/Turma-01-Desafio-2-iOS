@@ -20,11 +20,10 @@ struct PullRequestsView: View {
         print("ENTROU")
     }
     
-//    @StateObject var pullRequestsViewModel = PullRequestsViewModel(service: GitHubService())
-    
     var body: some View {
         NavigationView {
             List(pullRequestsViewModel.pullRequests, id: \.id) { item in
+                
                 VStack(alignment: .leading) {
                     HStack {
                         CustomImageView(urlString: "\(item.authorProfilePictureURL)")
@@ -60,6 +59,8 @@ struct PullRequestsView: View {
                         }
                         
                     }
+                }.onTapGesture {
+                    UIApplication.shared.open(URL(string: item.htmlURL) ?? K.gitHubURL)
                 }
             }
             .navigationBarTitle("Pull Requests")
