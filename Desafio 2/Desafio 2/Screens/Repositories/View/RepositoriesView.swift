@@ -15,10 +15,7 @@ struct RepositoriesView: View {
             List(repositoriesViewModel.repositories, id: \.id) { item in
                 VStack(alignment: .leading) {
                     HStack {
-                        Image("github")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50, alignment: .trailing)
+                        CustomImageView(urlString: "\(item.pictureURL)")
                         VStack(alignment: .leading, spacing: 3) {
                             HStack {
                                 Text("Name: ")
