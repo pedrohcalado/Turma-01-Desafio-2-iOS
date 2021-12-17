@@ -9,17 +9,27 @@ import Foundation
 
 class RepositoriesViewModel: ObservableObject, Identifiable {
     @Published var repositories: [RepositoryViewModel] = []
+    let service: RepositoriesService?
+    
+    var actualPage = 0
     
     init(service: RepositoriesService) {
-        service.getRepositories { success, results, error in
+        self.service = service
+        loadMoreRepos()
+    }
+    
+    func loadMoreRepos() {
+        actualPage += 1
+        service?.getRepositories(nextPageToLoad: actualPage, completion: { success, results, error in
             if success {
-                // TODO - ajustar para ObjectMapper
-                self.repositories = results?.repositories.map { RepositoryViewModel(repositoryName: $0.repositoryName, owner: $0.owner.ownerName, pictureURL: $0.owner.profilePicture, stars: String($0.stars), forks: String($0.forks), description: $0.description ?? "")} ?? []
+                self.repositories += results?.repositories.map { RepositoryViewModel(repositoryName: $0.repositoryName, owner: $0.owner.ownerName, pictureURL: $0.owner.profilePicture, stars: String($0.stars), forks: String($0.forks), description: $0.description ?? "")} ?? []
             } else {
                 self.repositories = []
             }
-        }
+        })
     }
+    
+    
 }
 
 class RepositoryViewModel: ObservableObject, Identifiable {

@@ -18,7 +18,6 @@ struct PullRequestsView: View {
         self.repositoryName = repositoryName
         self.repositoryOwner = repositoryOwner
         self.pullRequestsViewModel = PullRequestsViewModel(service: GitHubService(), repositoryName: repositoryName, repositoryOwner: repositoryOwner)
-        print("ENTROU")
     }
     
     var body: some View {

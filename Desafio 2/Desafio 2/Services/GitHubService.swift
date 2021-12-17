@@ -9,12 +9,14 @@ import Foundation
 import Alamofire
 
 class GitHubService: RepositoriesService {
-    func getRepositories(completion: @escaping (Bool, GitHubReponse?, String?) -> Void) {
-        let request = AF.request("https://api.github.com/search/repositories?q=language:Swift&sort=stars&page=1")
+    
+    func getRepositories(nextPageToLoad: Int = 1, completion: @escaping (Bool, GitHubReponse?, String?) -> Void) {
+        print("https://api.github.com/search/repositories?q=language:Swift&sort=stars&page=\(nextPageToLoad)")
+        let request = AF.request("https://api.github.com/search/repositories?q=language:Swift&sort=stars&page=\(nextPageToLoad)")
         request.validate().responseDecodable(of: GitHubReponse.self) { response in
             switch response.result {
             case .success:
-                print("REPOSITORIES")
+                print("REPOSITORIES", response.value?.repositories.count ?? "SEM REPOS")
                 completion(true, response.value, nil)
             case .failure(let error):
                 completion(false, nil, "Error when fetching repositories: \(error)")

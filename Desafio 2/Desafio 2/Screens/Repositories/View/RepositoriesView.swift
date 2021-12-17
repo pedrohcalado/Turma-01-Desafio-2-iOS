@@ -19,6 +19,7 @@ struct RepositoriesView: View {
                     label: {
                         VStack(alignment: .leading) {
                             HStack {
+                                
                                 WebImage(url: URL(string: item.pictureURL))
                                     .resizable()
                                     .placeholder(Image(systemName: "photo"))
@@ -67,9 +68,16 @@ struct RepositoriesView: View {
                             }
                         }
                     }
-                )
+                ).onAppear {
+                    if let lastRepoName = self.repositoriesViewModel.repositories.last?.repositoryName {
+                        if lastRepoName == item.repositoryName {
+                            self.repositoriesViewModel.loadMoreRepos()
+                        }
+                    }
             }
             .navigationBarTitle("Swift Repositories")
+            
+            }
         }
     }
 }
